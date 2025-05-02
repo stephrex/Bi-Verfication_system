@@ -93,12 +93,10 @@ if st.button("Verify Identity 🚀"):
             st.success(f"✅ MATCH FOUND! (Similarity Score: {prediction:.4f})")
             st.markdown(
                 "<h2 style='text-align: center; color: green;'>🟢 Identity Verified</h2>", unsafe_allow_html=True)
-            st.balloons()
         else:
             st.error(f"❌ NO MATCH (Similarity Score: {prediction:.4f})")
             st.markdown(
                 "<h2 style='text-align: center; color: red;'>🔴 Identity Mismatch</h2>", unsafe_allow_html=True)
-            st.snow()
 
     else:
         st.warning("Please upload both a face and a fingerprint image!")
