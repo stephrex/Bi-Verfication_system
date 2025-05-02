@@ -24,7 +24,7 @@ def load_model():
     print("Loading model...")
     model = tf.keras.models.load_model(
         # Adjust path if needed
-        _PROJECT_DIR + '/Models/siamese_model2.keras',
+        _PROJECT_DIR + '/siamese_model2.keras',
         custom_objects={"L1DistanceLayer": L1DistanceLayer},
         safe_mode=False
     )
