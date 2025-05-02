@@ -13,9 +13,20 @@ _PROJECT_DIR = os.getcwd()
 
 
 class L1DistanceLayer(tf.keras.layers.Layer):
+    def __init__(self, **kwargs):
+        super(L1DistanceLayer, self).__init__(**kwargs)
+
     def call(self, inputs):
-        x1, x2 = inputs
-        return tf.abs(x1 - x2)
+        x, y = inputs
+        return tf.math.abs(x - y)
+
+    def get_config(self):
+        config = super(L1DistanceLayer, self).get_config()
+        return config
+
+    def build(self, input_shape):
+        # No weights to build, but this must be defined if input_shape is passed
+        super(L1DistanceLayer, self).build(input_shape)
 
 # Load model
 
