@@ -55,7 +55,7 @@ col1, col2 = st.columns(2)
 with col1:
     face_image = st.file_uploader(
         "Upload Face Image 🧑",
-        type=["jpg", "jpeg", "png", "bmp", "BMP"]
+        type=["jpg", "jpeg", "png"]
     )
 with col2:
     fingerprint_image = st.file_uploader(
